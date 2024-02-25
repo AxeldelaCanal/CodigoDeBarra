@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código de Barras</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Código de Barras</h1>
+        <div class="input-container">
+            <label for="barcodeInput">Ingrese el número del código de barras:</label>
+            <input type="text" id="barcodeInput">
+            <button onclick="generateBarcode()">Generar Código de Barras</button>
+            <button onclick="downloadBarcodeImage('barcodeDisplay', 'codigo_de_barras.png')">Descargar Imagen</button>
+        </div>
+        <svg id="barcodeDisplay"></svg>
+    </div>
+
+    <div class="container">
+        <h1>Generador de Código de Barras 2</h1>
+        <div class="input-container">
+            <label for="barcodeInput2">Ingrese el número del código de barras:</label>
+            <input type="text" id="barcodeInput2">
+            <button onclick="generateBarcode2()">Generar Código de Barras</button>
+            <button onclick="downloadBarcodeImage('barcodeDisplay2', 'codigo_de_barras2.png')">Descargar Imagen</button>
+        </div>
+        <svg id="barcodeDisplay2"></svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
