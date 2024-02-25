@@ -5,15 +5,32 @@ body {
     padding: 0;
 }
 
-.container {
+.rappi {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fafafa;
+    border: 1px solid #050101;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center; /* Añadimos esta propiedad para centrar el contenido */
 }
+
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #050101;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 h1 {
     font-size: 24px;
@@ -22,34 +39,31 @@ h1 {
 }
 
 .input-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centramos horizontalmente los elementos */
     margin-bottom: 20px;
 }
 
 label {
-    margin-right: 10px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #555;
 }
 
 input[type="text"] {
     padding: 8px;
-    border: 1px solid #050101;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 8px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: auto;
+    padding: 8px 15px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 8px;
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -58,6 +72,6 @@ button:hover {
 
 svg {
     margin-top: 20px;
-    display: block; /* Añadimos esta propiedad para centrar verticalmente el código de barras */
-    margin: 0 auto; /* Centramos horizontalmente el código de barras */
+    display: block;
+    margin: 0 auto;
 }
