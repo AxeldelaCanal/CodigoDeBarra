@@ -1,17 +1,53 @@
-
+/* 
 function generateBarcode() {
-    var barcodeText = document.getElementById("barcodeInput").value;
-    
+    var barcodeText = document.getElementById("barcodeInput").value;    
 
     JsBarcode("#barcodeDisplay", barcodeText);
 }
 
+function generateBarcode() {
+
+    var barcodeText = document.getElementById("barcodeInput").value; //Num
+    var description = document.getElementById("descriptionInput").value; // Capturar la descripción ingresada
+
+    
+
+    JsBarcode("#barcodeDisplay", barcodeText, {
+        text: description + "\n" + barcodeText, // Mostrar la descripción arriba del código de barras
+        
+    
+    });
 
 
-function generateBarcode2() {
-    var barcodeText = document.getElementById("barcodeInput2").value;
-    JsBarcode("#barcodeDisplay2", barcodeText);
+    
+    
+} */
+
+function generateBarcode() {
+    var barcodeText = document.getElementById("barcodeInput").value; // Número de barras
+    var description = document.getElementById("descriptionInput").value; // Capturar la descripción ingresada
+
+    // Generar el código de barras
+    JsBarcode("#barcodeDisplay", barcodeText, {
+        displayValue: true, 
+        width: 2, // Ancho de las barras del código de barras
+        height: 50, // Altura del código de barras
+        margin: 20, // Margen alrededor del código de barras
+    });
+
+    // Añadir la descripción como texto SVG
+    var svgElement = document.getElementById("barcodeDisplay");
+    var svgNS = "http://www.w3.org/2000/svg";
+    var textElement = document.createElementNS(svgNS, "text");
+    textElement.setAttribute("x", "50%"); // Centrar horizontalmente
+    textElement.setAttribute("y", "12"); // Posicionar verticalmente dentro del margen superior
+    textElement.setAttribute("text-anchor", "middle"); // Alinear al centro
+    textElement.setAttribute("font-size", "15"); // Tamaño de la fuente
+    textElement.textContent = description;
+    svgElement.appendChild(textElement);
 }
+
+
 
 function downloadBarcodeImage(elementId, filename) {
     const svgElement = document.getElementById(elementId);
