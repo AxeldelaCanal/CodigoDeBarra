@@ -1,7 +1,12 @@
+
 function generateBarcode() {
     var barcodeText = document.getElementById("barcodeInput").value;
+    
+
     JsBarcode("#barcodeDisplay", barcodeText);
 }
+
+
 
 function generateBarcode2() {
     var barcodeText = document.getElementById("barcodeInput2").value;
