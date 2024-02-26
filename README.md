@@ -1,4 +1,5 @@
 # CodigoDeBarra
- APP Beta para codigos de barra
+ APP Beta para codigos de barras
+
  Es una Locura
  
