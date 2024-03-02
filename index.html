@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="barras.png">
-    
+    <link rel="icon" type="image/x-icon" href="barras.png">    
     <title>Generador de Código de Barras</title>
-    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <!-- CSS -->   
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">    
+    <!-- iconos--> 
+    <script src="https://kit.fontawesome.com/947f19c8f7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
     <header>
-
         <div class="container py-4">
             <img src="Rappi_logo.svg.png" class="logo-rappi d-block" alt="Rappi">
         </div>
-
-        
-        
     </header>
     
     <main class="container">
@@ -38,44 +32,29 @@
         <div class="container py-5">
         
             <div class="row g-3 justify-content-center">
-
                 
                 <div class="col-auto">
                     <label for="barcodeInput" class="col-form-label fs-5">Ingrese el número del código de barras:</label>
-                    <input type="text" id="barcodeInput" class="form-control my-2" aria-describedby="" required>
+                    <input type="number" id="barcodeInput" class="form-control my-2" aria-describedby="" required>
                     
                     <label for="barcodeInput" class="col-form-label fs-5" >Ingrese la descripción:</label>
-
-                    <!-- VER -->
                     <input type="text" id="descriptionInput" class="form-control my-2" aria-describedby="" required>
                     
                     <div class="col-md-12 text-end py-4">
-                        <button type="submit" class="btn btn-primary" onclick="generateBarcode()">Generar Código de Barras</button>                     
-                        
+                        <button type="submit" class="btn btn-primary" onclick="generateBarcode()">Generar Código de Barras</button>  
                     </div>
 
-                    <div class="col-md-12 text-center py-4">
-                        <h1 des></h1>
+                    <div class="col-md-12 text-center py-4">                        
                         <svg id="barcodeDisplay"></svg>
                     </div>
 
-                    
-
-                    <button class="btn btn-primary" onclick="downloadBarcodeImage('barcodeDisplay', 'codigo_de_barras.png')">Descargar Imagen</button>
-
-                </div>
-                
-                
-
-            </div>
-
-            
-            
-        </div>
-
-        
-
-      
+                    <div class="col-md-12 text-end py-4">
+                        <button type="submit" class="btn btn-secondary" onclick="downloadBarcodeImage('barcodeDisplay', 'codigo_de_barras.png')"><i class="fa-solid fa-cloud-arrow-down"></i></button>
+                        
+                    </div>
+                </div> <!-- col -->
+            </div> <!-- row -->
+        </div> <!-- container -->
         
     </main>
 
@@ -91,9 +70,7 @@
 
     
     <!-- js -->
-    <script src="script.js"></script>
-
-    
+    <script src="script.js"></script>    
    
     
 </body>
